@@ -1,0 +1,30 @@
+retrieve_news_task:
+  description: >
+    Retrieve the most recent and relevant news articles related to {topic}.
+    Focus on reliable, up-to-date, and diverse news sources from the current year.
+  expected_output: >
+    A list of 10-15 summarized headlines or article snippets with source links related to {topic}.
+  agent: retrieve_news
+
+website_scrape_task:
+  description: >
+    Scrape key information, data, or text from selected websites related to {topic}.
+    Ensure the extraction is structured, clean, and focused on relevant sections only.
+  expected_output: >
+    A structured dataset or text block containing the most important information extracted from the websites.
+  agent: website_scraper
+
+ai_news_write_task:
+  description: >
+   Summarize the information from the websites into a fully fledge news article in markdown format.
+  expected_output: >
+    A polished, well-written news article or blog post about {topic} in markdown format without '```'.
+  agent: ai_news_writer
+
+file_write_task:
+  description: >
+    Organize and save all generated outputs — research summaries, scraped content, and written articles —
+    into properly formatted files or folders for easy access and documentation.
+  expected_output: >
+    Structured and well-labeled files (e.g., .txt, .md, or .json) containing the final outputs on {topic} and all information from previous task into a file named news/{date}_news_article.md
+  agent: file_writer
