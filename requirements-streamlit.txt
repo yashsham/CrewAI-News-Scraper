@@ -1,0 +1,5 @@
+streamlit>=1.24
+python-dotenv>=1.0.0
+# crewai must be available in the environment (install per repo README)
+# if crewai is pip-installable: add it here, otherwise install manually on host
+# crewei/uv instructions are in your README — keep the same environment.
